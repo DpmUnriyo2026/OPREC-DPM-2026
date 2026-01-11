@@ -306,21 +306,49 @@ section h2 {
 /* ================= TIMELINE ================= */
 .timeline-container {
   display: flex;
-  flex-direction: column; /* default vertikal untuk HP */
-  gap: 25px;
+  flex-direction: column;
+  gap: 20px;
   max-width: 900px;
-  margin: 0 auto;
+  margin: auto;
 }
 
+/* Card Gelombang */
+.timeline-card {
+  background: var(--dark-blue-2);
+  border-radius: 12px;
+  padding: 15px 20px;
+  cursor: pointer;
+  color: var(--text-light);
+  transition: transform 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
+}
+
+.gelombang-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+/* Container untuk isi timeline (default hidden) */
+.timeline-items {
+  display: none;
+  margin-top: 10px;
+}
+
+/* Timeline Item */
 .timeline-item {
   display: flex;
   align-items: center;
   gap: 15px;
-  background: #fdf6e3; /* cream muda selaras website */
-  padding: 15px 20px;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 15px;
+  border-radius: 10px;
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(20px);
+  margin-bottom: 10px;
   transition: all 0.6s ease;
 }
 
@@ -332,8 +360,7 @@ section h2 {
 
 .timeline-text h4 {
   margin-bottom: 5px;
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .timeline-text p {
@@ -341,29 +368,30 @@ section h2 {
   font-size: 0.95rem;
 }
 
-/* animasi muncul */
+.deadline {
+  font-weight: bold;
+  color: var(--neon-yellow);
+}
+
+/* Show animation */
 .timeline-item.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* HORIZONTAL di desktop */
+/* Horizontal di desktop */
 @media(min-width: 992px) {
   .timeline-container {
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: nowrap;
   }
-  .timeline-item {
-    flex-direction: column;
-    text-align: center;
-    min-width: 180px;
+  .timeline-card {
+    width: 48%;
   }
-  .timeline-item i {
-    margin-bottom: 10px;
+  .timeline-items {
+    margin-top: 15px;
   }
 }
-
 
 /* ================= FOOTER ================= */
 footer {
