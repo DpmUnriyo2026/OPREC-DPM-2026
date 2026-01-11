@@ -96,9 +96,12 @@ nav img {
 .hero {
   min-height: 100vh;
   padding-top: 60px; /* agar navbar tidak menutupi */
-  background:
-    linear-gradient(rgba(11,28,45,0.6), rgba(11,28,45,0.6)),
-    url("../assets/dpm foto.jpg") center/cover no-repeat;
+  background: linear-gradient(
+    rgba(11,28,45,0.75),
+    rgba(11,28,45,0.75)
+  ), url('assets/dpm foto.jpg') center/cover no-repeat;
+}
+
   display: flex;
   align-items: center;
   justify-content: center;
