@@ -19,3 +19,16 @@ function toggleTimeline(id) {
     if(icon) icon.style.transform = "rotate(180deg)";
   }
 }
+function toggleDesc(card) {
+  const desc = card.querySelector('.komisi-desc');
+  const isVisible = window.getComputedStyle(desc).display !== 'none';
+  desc.style.display = isVisible ? 'none' : 'block';
+}
+
+function toggleDesc(card) {
+  const desc = card.querySelector('.komisi-desc');
+  desc.classList.toggle('show');
+}
+
+
+
