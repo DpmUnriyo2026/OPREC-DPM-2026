@@ -13,18 +13,20 @@ function toggleDesc(card){
 }
 // Scroll reveal untuk timeline
 const timelineItems = document.querySelectorAll(".timeline-item");
-
-function revealTimeline() {
-  const windowHeight = window.innerHeight;
-  timelineItems.forEach((item, index) => {
-    const top = item.getBoundingClientRect().top;
-    if(top < windowHeight - 100){
+function toggleTimeline(id) {
+  const container = document.getElementById(id);
+  if(container.style.display === "block") {
+    container.style.display = "none";
+    // reset animation
+    container.querySelectorAll(".timeline-item").forEach(item => item.classList.remove("show"));
+  } else {
+    container.style.display = "block";
+    // animasi muncul satu persatu
+    const items = container.querySelectorAll(".timeline-item");
+    items.forEach((item, index) => {
       setTimeout(() => {
         item.classList.add("show");
-      }, index * 200); // muncul bertahap 200ms per item
-    }
-  });
+      }, index * 200);
+    });
+  }
 }
-
-window.addEventListener("scroll", revealTimeline);
-revealTimeline();
