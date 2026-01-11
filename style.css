@@ -89,7 +89,7 @@ nav img {
   font-weight: 700;     /* bold */
   font-size: 1.2rem;
   color: #0b1c2d;       /* bisa sesuaikan */
-  line-height: 1;       /* rapat biar sejajar */
+  line-height: 2;       /* rapat biar sejajar */
 }
 
 /* HERO / BERANDA */
@@ -99,10 +99,10 @@ nav img {
     align-items: center;       /* vertical center */
     justify-content: center;   /* horizontal center */
     text-align: center;        /* center text di semua device */
-    min-height: 60vh;
+    min-height: 100vh;
     background-size: cover;
     background-position: center center;
-    padding-top: 60px; /* supaya navbar tidak menutupi */
+    padding-top: 80px; /* supaya navbar tidak menutupi */
     background: linear-gradient(
         rgba(11,28,45,0.75),
         rgba(11,28,45,0.75)
