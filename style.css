@@ -93,62 +93,51 @@ nav img {
 }
 
 /* HERO / BERANDA */
-
 .hero {
-    display: flex;
-    align-items: center;       /* vertical center */
-    justify-content: center;   /* horizontal center */
-    text-align: center;        /* center text di semua device */
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center center;
-    padding-top: 80px; /* supaya navbar tidak menutupi */
-    background: linear-gradient(
-        rgba(11,28,45,0.75),
-        rgba(11,28,45,0.75)
-    ), url('assets/dpm foto.jpg') center/cover no-repeat;
-}
-
-
+  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: center;       /* vertical center */
+  justify-content: center;   /* horizontal center */
+  text-align: center;        /* center text */
+  min-height: 100vh;
+  padding-top: 100px;        /* space dari navbar */
+  background: linear-gradient(
+      rgba(11,28,45,0.75),
+      rgba(11,28,45,0.75)
+    ),
+    url('assets/dpm_foto.jpg') center/cover no-repeat;
   color: #fff;
 }
 
 .hero-content {
-    max-width: 800px;
-    padding: 0 15px;
-    margin: 0 auto;
-    text-align: center;   /* ini yang bikin judul dan teks di tengah */
+  max-width: 800px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .hero h1 {
-    white-space: normal;       /* biar bisa pindah baris */
-    overflow: visible;         /* tampil semua teks */
-    text-overflow: clip;       /* hapus ellipsis */
-    word-wrap: break-word;     /* pecah kata jika terlalu panjang */
-    line-height: 1.2;          /* jarak antar baris rapat */
-}
-
+  font-size: clamp(2rem,5vw,3rem);
+  line-height: 1.2;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: visible;
+  margin-bottom: 1rem; /* jarak ke h2 */
 }
 
 .hero h2 {
-  font-size: clamp(1.2rem,1.8vw,1.5rem);
-  margin-top: 10px;
-  margin-bottom: 20px;
-  color: #ffd600; /* neon yellow */
-  line-height: 1.2;
+  font-size: clamp(1.2rem,3vw,1.5rem);
+  color: #ffd600;
+  font-weight: 700;
+  margin-bottom: 1.5rem; /* jarak ke paragraf */
 }
 
 .hero p {
-  font-size: clamp(1.4rem,1.4vw,1.25rem);
-  margin-bottom: 30px;
-  line-height: 1.3;
+  font-size: clamp(1rem,1.5vw,1.25rem);
+  line-height: 1.4;
+  margin-bottom: 2rem;
 }
 
-/* TOMBOL */
+/* Tombol */
 .btn-primary {
   background: #ffd600;
   color: #000;
@@ -166,25 +155,26 @@ nav img {
 
 /* MEDIA QUERY HP / LAYAR KECIL */
 @media(max-width:480px){
-    .hero h1 {
-        font-size: 1.5rem;
-        line-height: 1.2;
-        white-space: normal;
-    }
+  .hero {
+    padding-top: 120px; /* lebih space supaya tdk nempel navbar */
+    background-position: top center;
   }
-  
+
+  .hero h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
   .hero h2 {
-    font-size: 1rem;
-    line-height: 1;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
 
   .hero p {
     font-size: 0.95rem;
-    line-height: 1.2;
+    line-height: 1.3;
   }
-  .hero {
-    background-position: top center; /* fokus ke atas gambar */
-  }
+
   .btn-primary {
     padding: 12px 24px;
     font-size: 0.95rem;
