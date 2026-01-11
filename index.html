@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Open Recruitment DPM UNRIYO</title>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--Navbar-->
+<nav>
+  <div class="nav-left">
+    <img src="assets/dpm.logo.png" alt="Logo DPM" class="logo">
+    <span class="nav-title">DPM UNRIYO</span>
+  </div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#beranda" onclick="stayMenu()">Beranda</a>
+    <a href="#tentang" onclick="stayMenu()">Tentang DPM</a>
+    <a href="#komisi" onclick="stayMenu()">Komisi</a>
+    <a href="#daftar" onclick="stayMenu()">Daftar</a>
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="bi bi-list"></i>
+  </div>
+</nav>
+
+
+<!-- ================= BERANDA ================= -->
+<section class="hero" id="beranda">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>
+      Open Recruitment Anggota Baru<br>
+      Dewan Perwakilan Mahasiswa<br>
+      <span>Periode 2026/2027</span>
+    </h1>
+
+    <h2>Universitas Respati Yogyakarta</h2>
+<br>
+<br>
+    <p>
+      <b>Bukan sekadar mahasiswa, tapi wakil suara perubahan.</b><br>
+      Saatnya terlibat langsung sebagai bagian dari badan legislatif tertinggi mahasiswa.
+    </p>
+
+    <a class="btn-primary" target="_blank"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSf4nWXbx4BsURuwMZ3Ba6Lqk9Nq_CpEKYeb08yGiS6_itMcjg/viewform">
+      Daftar Sekarang
+    </a>
+  </div>
+</section>
+
+<!-- ================= TENTANG ================= -->
+<section id="tentang" class="section light">
+  <h2 class="section-title">Tentang DPM UNRIYO</h2>
+  <p class="center-text">
+    Dewan Perwakilan Mahasiswa (DPM) merupakan badan legislatif tertinggi mahasiswa
+    di Universitas Respati Yogyakarta.  
+    DPM berperan dalam menampung aspirasi, mengawasi kebijakan,
+    serta memastikan hak-hak mahasiswa tetap terjaga.
+  </p>
+</section>
+
+<!-- ================= KOMISI ================= -->
+<section id="komisi" class="section dark">
+  <h2 class="section-title">Komisi DPM</h2>
+
+  <div class="komisi">
+
+    <div class="komisi-card" onclick="toggleDesc(this)">
+      <i class="bi bi-chat-dots-fill"></i>
+      <h3>Komisi A</h3>
+      <p class="komisi-short">Aspirasi & Kominfo</p>
+      <div class="komisi-desc">
+        Menampung aspirasi mahasiswa serta mengelola informasi dan media komunikasi DPM.
+      </div>
+    </div>
+
+    <div class="komisi-card" onclick="toggleDesc(this)">
+      <i class="bi bi-cash-stack"></i>
+      <h3>Komisi B</h3>
+      <p class="komisi-short">Budgeting</p>
+      <div class="komisi-desc">
+        Mengawasi anggaran, transparansi keuangan, dan evaluasi penggunaan dana organisasi.
+      </div>
+    </div>
+
+    <div class="komisi-card" onclick="toggleDesc(this)">
+      <i class="bi bi-shield-check"></i>
+      <h3>Komisi C</h3>
+      <p class="komisi-short">Controlling</p>
+      <div class="komisi-desc">
+        Mengontrol dan mengevaluasi kinerja lembaga eksekutif mahasiswa.
+      </div>
+    </div>
+
+    <div class="komisi-card" onclick="toggleDesc(this)">
+      <i class="bi bi-people-fill"></i>
+      <h3>Komisi D</h3>
+      <p class="komisi-short">Advokasi</p>
+      <div class="komisi-desc">
+        Pendampingan, pembelaan hak mahasiswa, serta advokasi terhadap permasalahan kampus.
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ================= PERSYARATAN ================= -->
+<section id="persyaratan" class="section light">
+  <h2 class="section-title">Persyaratan Pendaftaran Anggota DPM 2026/2027</h2>
+
+  <ul class="persyaratan-list">
+    <li>Mahasiswa aktif Universitas Respati Yogyakarta (UNRIYO), angkatan 2023, 2024, atau 2025.</li>
+    <li>Sehat jasmani dan rohani.</li>
+    <li>Tidak sedang menjadi anggota BPH pada organisasi lain (HIMA, BEM, dll.).</li>
+    <li>Berperilaku <b>jujur, bertanggung jawab, dan kritis</b>.</li>
+  </ul>
+
+  <p><b>Catatan Khusus Komisi A (Aspirasi & Kominfo):</b> Wajib melampirkan portfolio dan CV saat pendaftaran.</p>
+</section>
+<hr>
+<!-- ================= TIMELINE ================= -->
+<section id="timeline" class="section light">
+  <h2 class="section-title">Jadwal Open Recruitment</h2>
+
+  <div class="timeline-container">
+
+    <!-- Gelombang 1 -->
+    <div class="timeline-item reveal">
+      <i class="bi bi-pencil-square"></i>
+      <div class="timeline-text">
+        <h4>Pendaftaran Gelombang 1</h4>
+        <p>10 – 16 Januari 2025</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <i class="bi bi-people"></i>
+      <div class="timeline-text">
+        <h4>Wawancara Gelombang 1</h4>
+        <p>17 Januari 2025</p>
+        <p>Via : Online (Google Meet / Video Call WhatsApp)</p>
+        <p>Waktu: 19.00 WIB</p>
+      </div>
+    </div>
+
+    <!-- Gelombang 2 -->
+    <div class="timeline-item reveal">
+      <i class="bi bi-pencil-square"></i>
+      <div class="timeline-text">
+        <h4>Pendaftaran Gelombang 2</h4>
+        <p>19 – 29 Januari 2025</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <i class="bi bi-people"></i>
+      <div class="timeline-text">
+        <h4>Wawancara Gelombang 2</h4>
+        <p>30 Januari 2025</p>
+        <p>Via: Online (Google Meet / Video Call WhatsApp)</p>
+        <p>Waktu: 19.00 WIB</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<hr>
+
+
+<!-- ================= DAFTAR ================= -->
+<section id="daftar" class="section dark">
+  <h2 class="section-title">Siap Jadi Bagian dari DPM?</h2>
+  <p class="center-text">
+    Jangan cuma jadi penonton perubahan.<br>
+    Suaramu punya tempat — kalau kamu berani melangkah.
+  </p>
+
+  <div class="btn-container">
+    <a class="btn-primary" target="_blank"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSf4nWXbx4BsURuwMZ3Ba6Lqk9Nq_CpEKYeb08yGiS6_itMcjg/viewform">
+      Daftar Sekarang
+    </a>
+  </div>
+</section>
+<hr>
+<!-- ================= FOOTER ================= -->
+<footer>
+  <img src="assets/dpm.logo.png" alt="Logo DPM">
+  <p>© 2026 DPM Universitas Respati Yogyakarta</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
