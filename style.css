@@ -304,92 +304,88 @@ section h2 {
 }
 
 /* ================= TIMELINE ================= */
-.timeline-container {
+.timeline-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
 }
 
-/* Card Gelombang */
 .timeline-card {
-  background: var(--dark-blue-2);
+  background: #f5f5f5; /* cream ringan */
   border-radius: 12px;
   padding: 15px 20px;
   cursor: pointer;
-  color: var(--text-light);
-  transition: transform 0.3s ease;
-}
-
-.timeline-card:hover {
-  transform: translateY(-5px);
 }
 
 .gelombang-title {
+  font-size: 1.2rem;
   font-weight: 700;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+  color: #0b1c2d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Container untuk isi timeline (default hidden) */
-.timeline-items {
-  display: none;
-  margin-top: 10px;
+.gelombang-title i {
+  transition: transform 0.3s ease;
 }
 
-/* Timeline Item */
+.timeline-container {
+  display: none; /* default hidden */
+  margin-top: 15px;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .timeline-item {
   display: flex;
   align-items: center;
   gap: 15px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(11,28,45,0.05);
   padding: 12px 15px;
   border-radius: 10px;
   opacity: 0;
   transform: translateY(20px);
-  margin-bottom: 10px;
-  transition: all 0.6s ease;
+  transition: all 0.5s ease;
 }
 
 .timeline-item i {
-  font-size: 2rem;
-  color: var(--neon-yellow);
+  font-size: 1.8rem;
+  color: #ffd600; /* neon yellow */
   flex-shrink: 0;
 }
 
 .timeline-text h4 {
-  margin-bottom: 5px;
-  font-weight: 600;
+  margin-bottom: 3px;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 .timeline-text p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
-.deadline {
-  font-weight: bold;
-  color: var(--neon-yellow);
-}
-
-/* Show animation */
 .timeline-item.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Horizontal di desktop */
+/* Responsive Horizontal for Desktop */
 @media(min-width: 992px) {
   .timeline-container {
     flex-direction: row;
     justify-content: space-between;
   }
-  .timeline-card {
-    width: 48%;
+  .timeline-item {
+    flex-direction: column;
+    text-align: center;
+    min-width: 150px;
   }
-  .timeline-items {
-    margin-top: 15px;
+  .timeline-item i {
+    margin-bottom: 8px;
   }
 }
 
