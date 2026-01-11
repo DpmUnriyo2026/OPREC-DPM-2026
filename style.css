@@ -306,9 +306,18 @@ section h2 {
 
 .komisi-desc {
   display: none;
-  margin-top: 12px;
-  font-size: 0.95rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
 }
+
+.komisi-desc.show {
+  display: block; /* tetap display block agar isi terlihat */
+  opacity: 1;
+  max-height: 200px; /* atau sesuai konten */
+}
+
 /* ================= TIMELINE ================= */
 .timeline-wrapper {
   display: flex;
