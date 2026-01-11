@@ -93,14 +93,22 @@ nav img {
 }
 
 /* HERO / BERANDA */
+
 .hero {
-  min-height: 100vh;
-  padding-top: 60px; /* agar navbar tidak menutupi */
-  background: linear-gradient(
-    rgba(11,28,45,0.75),
-    rgba(11,28,45,0.75)
-  ), url('assets/dpm foto.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;       /* vertical center */
+    justify-content: center;   /* horizontal center */
+    text-align: center;        /* center text di semua device */
+    min-height: 60vh;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 60px; /* supaya navbar tidak menutupi */
+    background: linear-gradient(
+        rgba(11,28,45,0.75),
+        rgba(11,28,45,0.75)
+    ), url('assets/dpm foto.jpg') center/cover no-repeat;
 }
+
 
   display: flex;
   align-items: center;
@@ -110,16 +118,20 @@ nav img {
 }
 
 .hero-content {
-  max-width: 800px;
-  padding: 0 15px;
+    max-width: 800px;
+    padding: 0 15px;
+    margin: 0 auto;
+    text-align: center;   /* ini yang bikin judul dan teks di tengah */
 }
 
 .hero h1 {
-  font-size: clamp(2rem,3vw,3rem);
-  font-weight: 800;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  line-height: 1.;
+    white-space: normal;       /* biar bisa pindah baris */
+    overflow: visible;         /* tampil semua teks */
+    text-overflow: clip;       /* hapus ellipsis */
+    word-wrap: break-word;     /* pecah kata jika terlalu panjang */
+    line-height: 1.2;          /* jarak antar baris rapat */
+}
+
 }
 
 .hero h2 {
@@ -154,12 +166,11 @@ nav img {
 
 /* MEDIA QUERY HP / LAYAR KECIL */
 @media(max-width:480px){
-  .hero h1 {
-    font-size: 1.5rem;      /* lebih kecil supaya muat satu baris */
-    line-height: 1;          /* rapat antar kata */
-    white-space: nowrap;      /* paksa satu baris */
-    overflow: hidden;
-    text-overflow: ellipsis;  /* opsional: "..." jika kepanjangan */
+    .hero h1 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        white-space: normal;
+    }
   }
   
   .hero h2 {
@@ -171,12 +182,15 @@ nav img {
     font-size: 0.95rem;
     line-height: 1.2;
   }
-  
+  .hero {
+    background-position: top center; /* fokus ke atas gambar */
+  }
   .btn-primary {
     padding: 12px 24px;
     font-size: 0.95rem;
   }
 }
+
 /* ================= BUTTON ================= */
 .btn {
   display: inline-block;
@@ -305,9 +319,10 @@ section h2 {
   margin-top: 12px;
   font-size: 0.95rem;
 }
+/* ================= TIMELINE ================= */
 .timeline-wrapper {
   display: flex;
-  flex-direction: column; /* tumpuk vertikal di desktop & HP */
+  flex-direction: column; /* tumpuk vertikal desktop & HP */
   gap: 25px;
   max-width: 700px;
   margin: 0 auto;
@@ -317,7 +332,6 @@ section h2 {
   background: #f5f5f5;
   border-radius: 12px;
   padding: 15px 20px;
-  cursor: pointer;
 }
 
 .gelombang-title {
@@ -327,6 +341,7 @@ section h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .gelombang-title i {
@@ -372,6 +387,14 @@ section h2 {
 .timeline-item.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Responsive HP */
+@media(max-width:768px){
+  .timeline-wrapper {
+    max-width: 95%;
+    margin: 0 auto;
+  }
 }
 
 
